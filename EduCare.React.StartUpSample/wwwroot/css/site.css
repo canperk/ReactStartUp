@@ -1,37 +1,381 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
-}
-
-/* Wrapping element */
-/* Set some basic padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-/* Set widths on the form inputs since otherwise they're 100% wide */
-input,
-select,
-textarea {
-    max-width: 280px;
-}
-
-/* Carousel */
-.carousel-caption p {
-    font-size: 20px;
-    line-height: 1.4;
-}
-
-/* Make .svg files in the carousel display properly in older browsers */
-.carousel-inner .item img[src$=".svg"] {
+﻿html, body {
     width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-family: "Segoe UI"
 }
 
-/* Hide/rearrange for smaller screens */
-@media screen and (max-width: 767px) {
-    /* Hide captions */
-    .carousel-caption {
+h1, h2, h3, h4, h5, h6 {
+    margin: 0px;
+    padding: 0px;
+    font-family: inherit;
+    font-weight: inherit;
+    line-height: 30px;
+    color: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+    a:hover, a:focus {
+        text-decoration: none;
+        color: #FFF;
+    }
+
+#header {
+    height: 30px;
+    background-color: #3c454f;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+#content {
+    background-color: #F9F9F9;
+    position: fixed;
+    bottom: 50px;
+    left: 0px;
+    right: 0px;
+    top: 30px;
+}
+
+#footer {
+    height: 50px;
+    background-color: #3c454f;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+#siteTitle {
+    color: #F9F9F9;
+    font-size: 20px;
+    float: left;
+    margin-left: 20px;
+    height: 30px;
+    min-width: 150px;
+}
+
+    #siteTitle span.fa {
+        float: left;
+        margin-right: 10px;
+        font-size: 30px;
+    }
+
+    #siteTitle h4 {
+        float: left;
+    }
+
+#titleHeaderArea {
+    color: #F9F9F9;
+    height: 30px;
+    position: absolute;
+    text-align: center;
+    background-color: #2086bf;
+    width: 400px;
+    left: 50%;
+    margin-left: -200px;
+}
+
+#titleInTitle {
+    display: inline-block;
+    line-height: 30px;
+}
+
+#userArea {
+    color: #F9F9F9;
+    float: right;
+    height: 30px;
+}
+
+#rightControls {
+    float: left;
+}
+
+    #rightControls a {
+        display: inline-block;
+    }
+
+    #rightControls span {
+        font-size: 20px;
+        line-height: 20px;
+        margin: 5px;
+    }
+
+    #rightControls a:hover {
+        background-color: #6f7884;
+        cursor: pointer;
+    }
+
+#siteUser {
+    float: right;
+}
+
+    #siteUser:hover {
+        background-color: #6f7884;
+        cursor: pointer;
+    }
+
+#userId {
+    display: block;
+    overflow: auto;
+    padding-left: 6px;
+    text-decoration: none;
+}
+
+    #userId img {
+        float: right;
+    }
+
+#siteUserText {
+    text-align: right;
+    background-color: transparent;
+    color: #fff;
+    text-decoration: none;
+    line-height: 30px;
+    padding-right: 12px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#startContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 15px;
+    min-width: 60px;
+    bottom: 0;
+    line-height: 45px;
+}
+
+#startContainerOverlay {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    bottom: 0;
+    right: 15px;
+}
+
+    #startContainerOverlay:hover {
+        background-color: #6f7884;
+        opacity: 0.3;
+        cursor: pointer;
+    }
+
+#startMenu {
+    font-size: 25px;
+    color: #FFF;
+    margin-left: 10px;
+    padding: 0px 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+#mainContent {
+    padding: 10px 10px 10px 30px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100%;
+}
+
+#optionsMenu {
+    position: fixed;
+    background-color: #3c454f;
+    height: 0px;
+    transition: height ease .5s;
+    bottom: 50px;
+    left: 0px;
+    right: 0px;
+}
+
+    #optionsMenu > div {
         display: none;
     }
+
+    #optionsMenu.open {
+        height: 450px;
+        border-bottom: 1px solid #FFF;
+        display: block;
+    }
+
+        #optionsMenu.open > div {
+            display: block;
+        }
+
+.menuContent ul {
+    color: #F9F9F9;
+    list-style: none;
+    width: 240px;
+    height: 400px;
+}
+
+    .menuContent ul li {
+        font-size: 14px;
+        margin-top: 3px;
+        margin-right: 3px;
+        padding: 3px;
+        text-align: left;
+    }
+
+        .menuContent ul li a {
+            color: #F9F9F9;
+        }
+
+        .menuContent ul li:hover, .menuContent ul li:hover a {
+            color: #3c454f !important;
+            background-color: #FFF;
+            cursor: pointer;
+        }
+
+#commandContent {
+    display: inline-block;
+}
+
+    #commandContent ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        float: left;
+    }
+
+        #commandContent ul li {
+            float: left;
+            display: list-item;
+        }
+
+            #commandContent ul li .commands {
+                background-color: transparent;
+                border: 0;
+                width: 85px;
+                height: 60px;
+                font-size: 9px;
+                color: #fff;
+                cursor: pointer;
+            }
+
+                #commandContent ul li .commands:hover {
+                    background-color: #505861;
+                }
+
+            #commandContent ul li .commandIcon {
+                font-size: 22px;
+            }
+
+            #commandContent ul li .commandText {
+                text-align: center;
+                text-transform: uppercase;
+                line-height: 1em;
+                word-wrap: break-word;
+                padding: 0 2px;
+                font-size: 11px;
+            }
+
+#notificationArea {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 60px;
+    height: 50px;
+    background-color: #5a6571;
+    cursor: pointer;
+}
+
+#notificationArea:hover {
+    background-color: #6a7581;
+}
+
+.bigLabel {
+    font-size: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 5px;
+}
+
+span.numerator {
+    color: #bddeef;
+    font-size: 15px;
+    overflow: hidden;
+    line-height: 50px;
+    padding-right: 5px;
+}
+
+.menuHeader {
+    color: #fff;
+    font-size: 18px;
+    padding: 5px 10px;
+}
+
+tr.selected {
+    background-color: #77AA77 !important;
+    color:#FFF;
+}
+
+.table-hover > tbody > tr.selected:hover {
+    background-color: #77AA77;
+}
+
+.row {
+    margin-bottom: 10px;
+}
+
+.form-control {
+    border-radius: 0px;
+    font-size: 12px;
+    height: 25px;
+}
+
+.form-group {
+    margin-bottom: 5px;
+}
+
+.btn {
+    border-radius: 0px;
+}
+
+.btn-group-sm > .btn, .btn-sm {
+    padding: 0px 5px;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+    padding: 5px;
+    line-height: 15px;
+    vertical-align: central;
+}
+.table-bordered > tbody > tr > td, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > td, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > thead > tr > th {
+    border: 1px solid #BBB;
+}
+.btn-group-sm > .btn, .btn-sm {
+    padding: 0px 5px;
+    font-size: 12px;
+    line-height: 1.5;
+    height: 25px;
+}
+
+.list-group-item {
+    padding: 5px 10px;
+    height: 37px;
+    line-height: 25px;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}
+
+.table-striped > tbody > tr:nth-of-type(even) {
+    background-color: #dcdcdc;
+}
+
+.table-hover > tbody > tr:hover {
+    background-color: #2086bf;
+    color: #FFF;
+    cursor: pointer;
 }

@@ -1,0 +1,33 @@
+{
+  "name": "educare",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Can PERK",
+  "license": "ISC",
+  "dependencies": {
+    "@types/react-dom": "^0.14.23",
+    "@types/react-router": "^4.0.4",
+    "@types/react-router-dom": "^4.0.3",
+    "jquery": "2.2.0",
+    "knockout": "3.4.2",
+    "prop-types": "^15.5.8",
+    "react": "15.5.4",
+    "react-dom": "^15.5.4",
+    "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1"
+  },
+  "devDependencies": {
+    "awesome-typescript-loader": "^3.1.2",
+    "del": "^2.2.2",
+    "glob": "^7.1.1",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-typescript": "^3.1.6",
+    "gulp-uglify": "^2.1.2",
+    "gulp-util": "^3.0.8",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "typescript": "^2.2.2",
+    "webpack": "^2.3.3"
+  }
+}

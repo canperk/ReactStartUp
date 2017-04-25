@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "inlineSources": false,
+    "jsx": "react",
+    "moduleResolution": "node",
+    "compileOnSave": false,
+    "allowJs": true,
+    "noImplicitAny": false,
+    "noEmitOnError": true,
+    "removeComments": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "declaration": false,
+    "isolatedModules": false,
+    "sourceMap": false,
+    "target": "es5",
+    "module": "commonjs",
+    "noLib": false
+  },
+  "exclude": [
+    "node_modules",
+    "wwwroot"
+  ],
+  "include": [
+    "ScriptLib/Components/**/*"
+  ]
+}
