@@ -18,10 +18,6 @@ module.exports = {
     },
     plugins: [
         new webpack.ProvidePlugin({
-            $: "jquery",
-            jQuery: "jquery",
-            knockout: "knockout",
-            ko: "knockout",
             "react": "React",
             "react-dom": "ReactDOM"
         })

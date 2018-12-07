@@ -3,7 +3,6 @@
     "inlineSources": false,
     "jsx": "react",
     "moduleResolution": "node",
-    "compileOnSave": false,
     "allowJs": true,
     "noImplicitAny": false,
     "noEmitOnError": true,

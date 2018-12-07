@@ -8,8 +8,6 @@
     "@types/react-dom": "^0.14.23",
     "@types/react-router": "^4.0.4",
     "@types/react-router-dom": "^4.0.3",
-    "jquery": "2.2.0",
-    "knockout": "3.4.2",
     "prop-types": "^15.5.8",
     "react": "15.5.4",
     "react-dom": "^15.5.4",
